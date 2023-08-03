@@ -43,5 +43,5 @@ jobs:
     displayName: Build an image
     inputs:
      repository: $(imageName)
-     command: buildAndPush
+     command: build
      Dockerfile: ./Dockerfile

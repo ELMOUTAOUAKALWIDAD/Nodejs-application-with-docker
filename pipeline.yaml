@@ -36,7 +36,7 @@ jobs:
    vmImage: 'ubuntu-latest' 
 
   variables:
-   imageName: 'pipelines-javascript-docker'
+   imageName: 'pipelines-node-docker'
 
   steps:
   - task: Docker@2

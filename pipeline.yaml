@@ -56,4 +56,4 @@ jobs:
      versionSpec: '8.x'
 
   - script: |
-     npm test
+     npm run test

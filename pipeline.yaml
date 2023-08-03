@@ -56,4 +56,27 @@ jobs:
      versionSpec: '8.x'
 
   - script: |
-     npm run test
+     npm install
+
+- job: installpylint
+  pool:
+   vmImage: 'ubuntu-20.04'
+  steps:
+  - task: UsePythonVersion@0
+    inputs:
+     versionSpec: '3.7'
+
+  - script: |
+     pip install pylint
+
+- job: testhtml
+  pool:
+   vmImage: 'ubuntu-20.04'
+  steps:
+  - task: NodeTool@0
+    inputs:
+     versionSpec: '8.x'
+
+  - script: |
+     npm install htmlhint
+     htmlhint public/index.html

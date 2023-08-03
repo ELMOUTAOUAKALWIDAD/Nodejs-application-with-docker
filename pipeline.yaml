@@ -45,3 +45,15 @@ jobs:
      repository: $(imageName)
      command: build
      Dockerfile: ./Dockerfile
+
+
+- job: testapp
+  pool:
+   vmImage: 'ubuntu-20.04'
+  steps:
+  - task: NodeTool@0
+    inputs:
+     versionSpec: '8.x'
+
+  - script: |
+     npm test

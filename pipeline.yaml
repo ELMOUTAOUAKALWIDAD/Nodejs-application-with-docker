@@ -78,5 +78,5 @@ jobs:
      versionSpec: '8.x'
 
   - script: |
-     npm install htmlhint
-     htmlhint public/index.html
+     npm install htmlhint -g && htmlhint public/index.html
+     
